@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bg_utama">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_pager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="72dp"
+            app:fabSize="normal"
+            app:tint="@color/white"
+            app:backgroundTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_forum_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:fabSize="normal"
+            app:backgroundTint="@color/blue"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/add_fab"
+            app:layout_constraintEnd_toEndOf="@+id/add_fab"
+            app:layout_constraintStart_toStartOf="@+id/add_fab"
+            app:srcCompat="@drawable/ic_baseline_post_add_24" />
+
+        <TextView
+            android:id="@+id/add_forum_action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Post Forum"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:background="@drawable/bg_text_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/add_forum_fab"
+            app:layout_constraintEnd_toStartOf="@+id/add_forum_fab"
+            app:layout_constraintTop_toTopOf="@+id/add_forum_fab" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_vote_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:fabSize="normal"
+            app:backgroundTint="@color/blue"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/add_forum_fab"
+            app:layout_constraintEnd_toEndOf="@+id/add_forum_fab"
+            app:layout_constraintStart_toStartOf="@+id/add_forum_fab"
+            app:srcCompat="@drawable/ic_baseline_how_to_vote_24" />
+
+        <TextView
+            android:id="@+id/add_vote_action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Post Voting"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:background="@drawable/bg_text_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/add_vote_fab"
+            app:layout_constraintEnd_toStartOf="@+id/add_vote_fab"
+            app:layout_constraintTop_toTopOf="@+id/add_vote_fab" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_elearn_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:fabSize="normal"
+            app:backgroundTint="@color/blue"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/add_vote_fab"
+            app:layout_constraintEnd_toEndOf="@+id/add_vote_fab"
+            app:layout_constraintStart_toStartOf="@+id/add_vote_fab"
+            app:srcCompat="@drawable/ic_baseline_school_24" />
+
+        <TextView
+            android:id="@+id/add_elearn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:background="@drawable/bg_text_rounded"
+            android:text="Post E-Learn"
+            app:layout_constraintBottom_toBottomOf="@+id/add_elearn_fab"
+            app:layout_constraintEnd_toStartOf="@+id/add_elearn_fab"
+            app:layout_constraintTop_toTopOf="@+id/add_elearn_fab" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cnb_menuResource="@menu/menu"
+        android:background="@color/white"
+        android:layout_gravity="bottom"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

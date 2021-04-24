@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/error"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/ic_baseline_error_outline_24"
+        android:tint="@color/blue_dark"/>
+    <TextView
+        android:id="@+id/txt_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gagal memuat data"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/blue_dark"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textAlignment="center"/>
+</LinearLayout>
